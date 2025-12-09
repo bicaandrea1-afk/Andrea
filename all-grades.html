@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regjistruesi i Notave | Tabela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Grade Tracker</div>
+        <div class="menu-icon">☰</div>
+    </header>
+
+    <main class="container">
+        
+        <section id="tabela-notave">
+            <h1>Të Gjitha Notat</h1>
+            <p class="subtitle">Menaxho historinë e notave</p>
+
+            <div class="card filter-card">
+                <h2>Filtro Notat</h2>
+                <div class="form-group">
+                    <label for="filtro-studenti">Filtro sipas Studentit</label>
+                    <select id="filtro-studenti">
+                        <option value="all">Të gjithë Studentët</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nga-data">Nga Data</label>
+                    <input type="date" id="nga-data">
+                </div>
+                <div class="form-group">
+                    <label for="deri-data">Deri në Datë</label>
+                    <input type="date" id="deri-data">
+                </div>
+            </div>
+
+            <div class="card list-card">
+                <div class="list-header">
+                    <h2>Lista e Notave</h2>
+                    <a href="index.html" class="btn btn-add-new">Shto Notë</a>
+                </div>
+                
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Studenti</th>
+                            <th>Lënda</th>
+                            <th>Komentet</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grades-table-body">
+                        <tr>
+                            <td colspan="5" class="no-data">Nuk ka nota të regjistruara.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="back-link">
+                <a href="index.html" class="btn btn-secondary">Kthehu te Forma</a>
+            </div>
+
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

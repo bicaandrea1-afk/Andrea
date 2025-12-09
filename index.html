@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regjistruesi i Notave | Shto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Grade Tracker</div>
+        <div class="menu-icon">☰</div>
+    </header>
+
+    <main class="container">
+        
+        <section id="shto-note">
+            <h1>Shto Notë të Re</h1>
+            <p class="subtitle">Vendos detajet e notës më poshtë</p>
+
+            <div id="success-message" class="success-message" style="display: none;">
+                Nota u shtua me sukses! <span class="close-btn" onclick="document.getElementById('success-message').style.display='none'">×</span>
+            </div>
+
+            <div class="form-card">
+                <form id="grade-form"> 
+                    <div class="form-group">
+                        <label for="studenti">Studenti *</label>
+                        <input type="text" id="studenti" placeholder="Emri i Studentit" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lendet">Lënda *</label>
+                        <select id="lendet" required>
+                            <option value="">Zgjidh Lëndën</option>
+                            <option value="Programimi">Programimi</option>
+                            <option value="Matematika">Matematika</option>
+                            <option value="Fizika">Fizika</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nota">Nota (1-10) *</label>
+                        <input type="number" id="nota" placeholder="P.sh. 9" min="1" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data *</label>
+                        <input type="date" id="data" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="komentet">Komentet *</label>
+                        <textarea id="komentet" placeholder="Vendos komente shtesë" required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Shto Notën</button>
+                        <a href="all-grades.html" class="btn btn-secondary">Kthehu te Tabela</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
